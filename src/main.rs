@@ -1,3 +1,6 @@
+use vault;
 fn main() {
-    println!("Hello, world!");
+    let data = include_bytes!("../replays/vsvsvsvsvsv.rec");
+    let replay = vault::Replay::from_bytes(data);
+    assert!(replay.is_ok())
 }
